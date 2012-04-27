@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+    <head>
+        <script src=../lib/CondVar.js></script>
+        <script>
+            window.onload = function(){
+                var t1, t2, t3;
+                var cv = CondVar.get();
+
+                window.document.write('Start<br>');
+
+                t1 = (new Date()).getTime();
+                cv.begin();
+                setTimeout(function(){ t2 = (new Date()).getTime(); cv.end(); }, 1000);
+                setTimeout(cv.begin(), 2000);
+
+                cv.cb(function(){
+                    t3 = (new Date()).getTime();
+                    window.document.write('done1<br>');
+                });
+
+                cv.cb(function(){
+                    window.document.write('done2<br>');
+                }).cb(function(){
+                    window.document.write('done3: '+(t2-t1)+' '+(t3-t1)+'<br>');
+                });
+            };
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
