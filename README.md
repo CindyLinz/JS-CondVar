@@ -21,7 +21,7 @@ var my_cv = CondVar.get();
 my_cv.begin();
 async_job(..., function(result){
   ...
-  my_cv.end();
+  my_cv.end(); // or my_cv();
 });
 
 // You can assign more asynchronous jobs...
@@ -110,6 +110,10 @@ API Reference
   You should never call **begin** on a fired **cv**.
 
   This function return the **cv** itself.
+
++ cv()
+
+  The **cv** itself can be called. It's identical to cv.end().
 
 + cv = cv.cb(callback)
 
