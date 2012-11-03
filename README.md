@@ -57,7 +57,7 @@ var my_cv = CondVar.get(parent_cv);
 Install
 =======
 
-If you use [RequireJS][] you can load it as a module.
+If you use [GreenDefine][] or [RequireJS][] you can load it as a module.
 
 ```javascript
 define([..., 'CondVar', ...], function(..., CondVar, ...){
@@ -81,6 +81,7 @@ If you use this library stand alone.
 ```
 
 [RequireJS]: http://requirejs.org/
+[GreenDefine]: https://github.com/CindyLinz/JS-GreenDefine
 
 API Reference
 =============
