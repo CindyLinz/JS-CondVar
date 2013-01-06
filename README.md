@@ -6,7 +6,7 @@ Conditional Variable for Javascript
 Version
 =======
 
-0\.02
+0\.03
 
 Synopsis
 ========
@@ -148,4 +148,4 @@ Lincense
 Copyright 2012, Cindy Wang (CindyLinz)  
 Licensed under the MIT or GPL Version 2 licenses or GPL Version 3 licenses.
 
-Date: 2012.8.5
+Date: 2013.1.6
